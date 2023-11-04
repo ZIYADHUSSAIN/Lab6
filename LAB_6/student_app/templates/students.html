@@ -1,0 +1,16 @@
+<section>
+  {{ student }}
+  <form>
+    <select>
+      {% for c in notRegisteredCourses %}
+      <option value="{{c.course_id}}">{{ c }}</option>
+      {% endfor %}
+    </select>
+    <input type="submit" value="Add Course" />
+  </form>
+  <ul>
+    {% for c in student.courses %}
+    <li>{{ c }}</li>
+    {% endfor %}
+  </ul>
+</section>
